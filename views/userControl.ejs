@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bt-br">
+<html lang="pt-br">
 <head>
   <link rel="stylesheet" href="../stylesheets/style.css">
   <!-- Bootstrap CSS -->
@@ -8,55 +8,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="imagem/png" href="../images/icons8-valorant-64.png"/>
-  <title>Contato</title>
+  <title>Dados</title>
 </head>
-<body class="bg-dark">
+<body style="background-color: #1f1f1f;">
 
  <%- include('./partials/header') %>
+
  <br>
- 
 
- <div class="container">
+    <div class="container text-white">
 
-   <div>
      
-     <a class=" border border-info btn btn-dark  m3 link-light " href=""><img src="../images/icons8-gmail-96.png" alt=""> Email para Duvidas</a>
-     <span class="text-white"> Empresa@Duvidas.com.br </span>
-     
-   </div>
-   
-  
-  
-     <br>
-     <br>
-     <div>
-    
-       <a class="border border-info btn btn-dark m3 link-light" href=""><img src="../images/icons8-gmail-96.png" alt=""> Email Para Divulgações</a>
-       <span class="text-white">  Empresa@divlga.com.br </span>
-    
-  
-     </div>
-     
-     <br>
-     <br>
-     <div>
-       
-       <a class=" border border-info btn btn-dark m3" href=""><img src="../images/icons8-whatsapp-96.png" alt="">Whatsapp para Duvidas</a>
-       <span class="text-white"> (DDD)9 9999-9999 </span>
-  
-     </div>
-     <br>
-     <br>
-     <div class="">
-       
-       <a class=" border border-info btn btn-dark  m3" href=""><img src="../images/icons8-whatsapp-96.png" alt="">Whatsapp para Duvidas</a>
-       <span class="text-white"> (DDD)9 9999-9999 </span>
-     </div>
- </div>
+        <p class="display-3">Dados da conta</p>
+        <div class="dados bg-dark p-3 rounded-3">
+        
+            <div class="border-bottom border-info p-1">
+                
+                Usuário <a href=""> <span class="centralizadouser">LoginUsuario</span> </a>
 
+            </div>
+            
+            <div class="border-bottom border-info p-1">
+                
+                Email <a href=""> <span class="centralizadoemail">EmailUsuario@emal.com</span> </a>
+
+            </div>
+    
+            
+        </div>
+        <p class="display-3">Dados pessoais</p>
+
+        <div class="dados bg-dark p-3 rounded-3">
+        
+            <div class="border-bottom border-info p-1">
+                
+                Nome <a href=""> <span class="centralizadoName">NomeUsuario</span> </a>
+
+            </div>
+            
+            <div class="border-bottom border-info p-1">
+                
+                Documento <a href=""> <span class="centralizadocpf">CPF 999999999-99</span> </a>
+
+            </div>
+            <div class="border-bottom border-info p-1">
+                
+                Telefone <a href=""> <span class="centralizadocell"> (99) 9 9999-9999</span> </a>
+
+            </div>
+    
+            
+        </div>
+  
+<br>
     
   
-  
+  </div>
   
 
   <%- include('./partials/footer') %>

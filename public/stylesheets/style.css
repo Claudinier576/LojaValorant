@@ -2,3 +2,53 @@
   border: 2px white solid;
  border-radius: 30px;
 }
+
+.dados a{
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+.dados {
+  background: url();
+}
+@media only screen and (max-width: 600px) {
+  .centralizadouser  {
+    margin-left: 20%;
+ 
+  }
+  
+  .centralizadoemail{
+    margin-left: 25%;
+
+  }
+  .centralizadocpf{
+    margin-left: 9%;
+
+  }
+  .centralizadocell{
+    margin-left: 16%;
+ 
+  }
+  .centralizadoName{
+    margin-left: 22%;
+  }
+  
+}
+@media only screen and (min-width: 600px) {
+  .centralizadoemail  {
+    margin-left: 40%;
+  }
+  .centralizadouser{
+    margin-left: 39%;
+  }
+  .centralizadoName{
+    margin-left: 40%;
+  }
+  .centralizadocpf{
+    margin-left: 37%;
+  }
+  .centralizadocell{
+    margin-left: 39%;
+  }
+
+}

@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var skinsRouter = require('./routes/skins');
 var contactRouter = require('./routes/contact');
 var giftcardRouter = require('./routes/gift-card');
+var userControlRouter = require('./routes/userControl');
 var app = express();
 
 // view engine setup
@@ -26,6 +27,7 @@ app.use('/users', usersRouter);
 app.use('/skins', skinsRouter);
 app.use('/contact', contactRouter);
 app.use('/giftcard', giftcardRouter);
+app.use('/userControl', userControlRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
