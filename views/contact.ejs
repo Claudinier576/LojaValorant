@@ -12,7 +12,13 @@
 </head>
 <body class="bg-dark">
 
- <%- include('./partials/header') %>
+      <% if ( logado != true ) { %>
+        <%- include('./partials/headerNLogado') %>
+    <% } %>
+
+    <% if ( logado == true ) { %>
+        <%- include('./partials/headerLogado') %>
+    <% } %>
  <br>
  
 

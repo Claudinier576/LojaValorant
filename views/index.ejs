@@ -1,194 +1,343 @@
 <!DOCTYPE html>
 <html lang="bt-br">
+
 <head>
   <link rel="stylesheet" href="../stylesheets/style.css">
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="imagem/png" href="../images/icons8-valorant-64.png"/>
+  <link rel="icon" type="imagem/png" href="../images/icons8-valorant-64.png" />
   <title>Canto Vava</title>
 </head>
+
 <body style="background-color: #1f1f1f;">
 
- <%- include('./partials/header') %>
+  <% if ( logado !=true ) { %>
+    
+    <%- include('./partials/headerNLogado') %>
 
-  <div class="container text-white">
+      <% } %>
 
-    <div class="text-center">
-      <h1 class="display-1">
-        O melhor site de Valorant
-      </h1>
-      
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../images/B01.jpg" class="d-block w-100 imgradius" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../images/B02.png" class="d-block w-100 imgradius" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img  src="../images/B02.jpg" class="d-block w-100 imgradius" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img  src="../images/B04.jpg" class="d-block w-100 imgradius " alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-<br>
+        <% if ( logado==true ) { %>
 
-<div class="row row-cols-1 row-cols-md-3 g-3">
- 
-  <div class="col">
+          <%- include('./partials/headerLogado') %>
 
-    <div class="card bg-dark  ">
-      <div class="card-header text-info bg-dark"> 
-        <h1>A Melhor Comprar Skins</h1>
-      </div>
-      <div class="card-body ">
-        <h5 class="card-title text-success">Nossa Loja de skins</h5>
-        <p class="card-text">é uma loja nova que permite você comprar suas skins para sua conta ou para presente sem precisar esperar aquela skin aparecer na sua loja</p>
-        <p class="card-text">loja oficial com parceria direta com a  <a class="text-danger" href=""> Riot Games </a> </p>
-      </div>
-    </div>
-  </div>
+      <% } %>
 
-  <div class="col">
+              <div class="container text-white">
 
-    <div class="card bg-dark ">
-      <div class="card-header text-info bg-dark"> 
-        <h1>A Melhor Compra de Gift-Card</h1>
-      </div>
-      <div class="card-body ">
-        <h5 class="card-title text-success">Nossa loja de Gift-Card</h5>
-        <p class="card-text">Gift-card de diversos valores com uma taxa extremamente baixa</p>
-        <p class="card-text">Temos de diversos jogos Principalmente o valorant e LOL</p>
-      </div>
-    </div>
-  </div>
+                <div class="text-center">
+                  <h1 class="display-1">
+                    O melhor site de Valorant
+                  </h1>
 
-  <div class="col">
-    <div class="card bg-dark">
-      <div class="card-header text-info bg-dark"> 
-        <h1>A Melhor Mentoria</h1>
-      </div>
-      <div class="card-body ">
-        <h5 class="card-title text-success">Nossa Mentoria</h5>
-        <p class="card-text">Um de nossos profissionais vai  jogar com você, ver seus erros te ensinar a parar com eles, ensinar taticas, passar treinos de mira,movimentação e posicionamento</p>
-        <p class="card-text">formas de sempre jogar calmo, o que pensar para ganhar todos os clutchs e muito mais...</p>
-      </div>
-    </div>
-  </div>
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../images/B01.jpg" class="d-block w-100 imgradius" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../images/B02.png" class="d-block w-100 imgradius" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../images/B02.jpg" class="d-block w-100 imgradius" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../images/B04.jpg" class="d-block w-100 imgradius " alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <br>
 
+                <div class="row row-cols-1 row-cols-md-3 g-3">
 
-</div>
+                  <div class="col">
 
-<br>
+                    <div class="card bg-dark  ">
+                      <div class="card-header text-info bg-dark">
+                        <h1>A Melhor Comprar Skins</h1>
+                      </div>
+                      <div class="card-body ">
+                        <h5 class="card-title text-success">Nossa Loja de skins</h5>
+                        <p class="card-text">é uma loja nova que permite você comprar suas skins para sua conta ou para
+                          presente sem precisar esperar aquela skin aparecer na sua loja</p>
+                        <p class="card-text">loja oficial com parceria direta com a <a class="text-danger" href=""> Riot
+                            Games </a> </p>
+                      </div>
+                    </div>
+                  </div>
 
-<div class="row row-cols- row-cols-md-2 g-3">
+                  <div class="col">
 
- 
-  <div class="col">
+                    <div class="card bg-dark ">
+                      <div class="card-header text-info bg-dark">
+                        <h1>A Melhor Compra de Gift-Card</h1>
+                      </div>
+                      <div class="card-body ">
+                        <h5 class="card-title text-success">Nossa loja de Gift-Card</h5>
+                        <p class="card-text">Gift-card de diversos valores com uma taxa extremamente baixa</p>
+                        <p class="card-text">Temos de diversos jogos Principalmente o valorant e LOL</p>
+                      </div>
+                    </div>
+                  </div>
 
-    <div class="card bg-dark  ">
-      <div class="card-header text-info bg-dark text-center"> 
-        <h1>Oferta do dia</h1>
-      </div>
-      <div class="card-body ">
-
-
-        <div class="card bg-dark ">
-
-          <div class="card-header text-center bg-dark"> 
-            <h1>Vandal Sublime</h1>
-          </div>
-          <div class="card-body ">
-              <h5 class="card-title text-success">R$ 10,00</h5>
-              <a href=""><img src="../images/Sublime_Vandal.png" alt="" class="w-100"> </a> 
-              <p class="card-text">Skin da Vandal Amada por todos os jogadores, <strong>Conjunto:</strong> <span style="color:yellow"> Sublime </span> </p>
-              <a href=""> <img src="../images/icons8-add-to-basket-32.png" class="position-absolute top-75 end-0 translate-middle" alt=""></a>
-          </div>
-            <div class="card-footer">
-              <p class="text-info"> Postado ha: 10 minutos atras </p>
-          </div>
-        </div>
+                  <div class="col">
+                    <div class="card bg-dark">
+                      <div class="card-header text-info bg-dark">
+                        <h1>A Melhor Mentoria</h1>
+                      </div>
+                      <div class="card-body ">
+                        <h5 class="card-title text-success">Nossa Mentoria</h5>
+                        <p class="card-text">Um de nossos profissionais vai jogar com você, ver seus erros te ensinar a
+                          parar com eles, ensinar taticas, passar treinos de mira,movimentação e posicionamento</p>
+                        <p class="card-text">formas de sempre jogar calmo, o que pensar para ganhar todos os clutchs e
+                          muito mais...</p>
+                      </div>
+                    </div>
+                  </div>
 
 
-      </div>
-    </div>
-  </div>
+                </div>
 
-  <div class="col">
+                <br>
 
-    <div class="card bg-dark ">
-      <div class="card-header text-info bg-dark text-center"> 
-        <h1>Oferta do dia</h1>
-      </div>
-      <div class="card-body ">
-        <div class="card bg-dark ">
-          <div class="card-header text-center bg-dark"> 
-            <h1>Marchal Soberania</h1>
-          </div>
-          <div class="card-body ">
-              <h5 class="card-title text-success">R$ 10,00</h5>
-              <a href=""><img src="../images/soberania_Marshal.png" alt="" class="w-100"> </a> 
-              <p class="card-text">Skin da Guardian Amada por todos os jogadores, <strong>Conjunto:</strong> <span style="color:rgb(120, 94, 190)"> Soberania </span> </p>
-              <a href=""> <img src="../images/icons8-add-to-basket-32.png" class="position-absolute top-75 end-0 translate-middle" alt=""></a>
-            </div>
-            <div class="card-footer">
-              <p class="text-info"> Postado ha: 1 minutos atras </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
 
 
+                  <div class="col col-lg-8">
+
+                    <div class="card bg-dark  ">
+                      <div class="card-header text-info bg-dark text-center">
+                        <h1>As Maiores Ofertas do dia</h1>
+                      </div>
+                      <div class="card-body ">
+
+                        <div id="carouselOfertas" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                              <div class="card bg-dark ">
+
+                                <div class="card-header text-center bg-dark">
+                                  <h1 class="sublime-text">Pacote Sublime</h1>
+                                </div>
+                                <div class="card-body ">
+                                  <h5 class="card-title text-success">R$ 100,00</h5>
+                                  <a href=""><img src="../images/pacote_Sublime.jfif" alt="" class="w-100"> </a>
+                                  <p class="card-text">Skin da Vandal Amada por todos os jogadores,
+                                    <strong>Conjunto:</strong> <span style="color:yellow"> Sublime </span> </p>
+
+                                </div>
+                                <div class="card-footer">
+                                  <p class="text-info"> Postado ha: 10 minutos atras </p>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="carousel-item">
+
+                              <div class="card bg-dark ">
+
+                                <div class="card-header text-center bg-dark">
+                                  <h1 class="saqueador-text">Pacote Saqueador</h1>
+                                </div>
+                                <div class="card-body ">
+                                  <h5 class="card-title text-success">R$ 100,00</h5>
+                                  <a href=""><img src="../images/pacote_saqueador.jpg" alt="" class="w-100"> </a>
+                                  <p class="card-text">Skin da Vandal Amada por todos os jogadores,
+                                    <strong>Conjunto:</strong> <span style="color:#9420F4"> Saqueador </span> </p>
+
+                                </div>
+                                <div class="card-footer">
+                                  <p class="text-info"> Postado ha: 20 minutos atras </p>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <button class="carousel-control-prev " type="button" data-bs-target="#carouselOfertas"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next " type="button" data-bs-target="#carouselOfertas"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
 
 
-</div>
-  
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+
+                    <div class="card bg-dark ">
+                      <div class="card-header text-info bg-dark text-center">
+                        <h1>Oferta do dia</h1>
+                      </div>
+                      <div class="card-body ">
+                        <div class="card bg-dark ">
+                          <div class="card-header text-center bg-dark">
+                            <h1>Marchal Soberania</h1>
+                          </div>
+                          <div class="card-body ">
+                            <h5 class="card-title text-success">R$ 10,00</h5>
+                            <a href=""><img src="../images/soberania_Marshal.png" alt="" class="w-100"> </a>
+                            <p class="card-text">Skin da Guardian Amada por todos os jogadores,
+                              <strong>Conjunto:</strong> <span style="color:rgb(120, 94, 190)"> Soberania </span> </p>
+                            <a href=""> <img src="../images/icons8-add-to-basket-32.png"
+                                class="position-absolute top-75 end-0 translate-middle" alt=""></a>
+                          </div>
+                          <div class="card-footer">
+                            <p class="text-info"> Postado ha: 1 minutos atras </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+
+                    <div class="card bg-dark ">
+                      <div class="card-header text-info bg-dark text-center">
+                        <h1>Oferta do dia</h1>
+                      </div>
+                      <div class="card-body ">
+                        <div class="card bg-dark ">
+                          <div class="card-header text-center bg-dark">
+                            <h1>Sheriff Singularidade</h1>
+                          </div>
+                          <div class="card-body ">
+                            <h5 class="card-title text-success">R$ 13,00</h5>
+                            <a href=""><img src="../images/Singularidade_Sheriff.png" alt="" class="w-100"> </a>
+                            <p class="card-text">Skin da Guardian Amada por todos os jogadores,
+                              <strong>Conjunto:</strong> <span style="color:rgb(55, 42, 92)"> Singularidade </span> </p>
+                            <a href=""> <img src="../images/icons8-add-to-basket-32.png"
+                                class="position-absolute top-75 end-0 translate-middle" alt=""></a>
+                          </div>
+                          <div class="card-footer">
+                            <p class="text-info"> Postado ha: 1 minutos atras </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-4">
+
+                    <div class="card bg-dark ">
+                      <div class="card-header text-info bg-dark text-center">
+                        <h1>Oferta do dia</h1>
+                      </div>
+                      <div class="card-body ">
+                        <div class="card bg-dark ">
+                          <div class="card-header text-center bg-dark">
+                            <h1>Machado Sublime</h1>
+                          </div>
+                          <div class="card-body ">
+                            <h5 class="card-title text-success">R$ 50,00</h5>
+                            <a href=""><img src="../images/Sublime_Machado.png" alt="" class="w-100"> </a>
+                            <p class="card-text">Skin da Guardian Amada por todos os jogadores,
+                              <strong>Conjunto:</strong> <span style="color:yellow"> Sublime </span> </p>
+                            <a href=""> <img src="../images/icons8-add-to-basket-32.png"
+                                class="position-absolute top-75 end-0 translate-middle" alt=""></a>
+                          </div>
+                          <div class="card-footer">
+                            <p class="text-info"> Postado ha: 1 minutos atras </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+
+                    <div class="card bg-dark ">
+                      <div class="card-header text-info bg-dark text-center">
+                        <h1>Oferta do dia</h1>
+                      </div>
+                      <div class="card-body ">
+                        <div class="card bg-dark ">
+                          <div class="card-header text-center bg-dark">
+                            <h1>Faca Saqueador</h1>
+                          </div>
+                          <div class="card-body ">
+                            <h5 class="card-title text-success">R$ 50,00</h5>
+                            <a href=""><img src="../images/Saqueador_Faca.png" alt="" class="w-100"> </a>
+                            <p class="card-text">Skin da Guardian Amada por todos os jogadores,
+                              <strong>Conjunto:</strong> <span style="color:rgb(123, 45, 187)"> Saqueador </span> </p>
+                            <a href=""> <img src="../images/icons8-add-to-basket-32.png"
+                                class="position-absolute top-75 end-0 translate-middle" alt=""></a>
+                          </div>
+                          <div class="card-footer">
+                            <p class="text-info"> Postado ha: 1 minutos atras </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
 
 
 
-   
-  </div>
-  
 
 
-  <%- include('./partials/footer') %>
+              </div>
 
 
 
+              <%- include('./partials/footer') %>
 
 
 
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
+
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+                  crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
   -->
-  
+
 </body>
+
 </html>

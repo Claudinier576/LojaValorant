@@ -11,6 +11,13 @@
 .dados {
   background: url();
 }
+.sublime-text{
+  color: #E9F324;
+}
+.saqueador-text{
+  color: #9420F4;
+}
+
 @media only screen and (max-width: 600px) {
   .centralizadouser  {
     margin-left: 20%;

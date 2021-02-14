@@ -12,11 +12,19 @@
 </head>
 <body style="background-color: #1f1f1f;">
 
- <%- include('./partials/header') %>
+    <% if ( logado != true ) { %>
+        <%- include('./partials/headerNLogado') %>
+        <h1>Nessecario logar </h1>
+    <% } %>
+
+    <% if ( logado == true ) { %>
+        
+        <%- include('./partials/headerLogado') %>
+    <% } %>
 
  <br>
 
-    <div class="container text-white">
+    <div class="container text-white mt-auto mb-auto">
 
      
         <p class="display-3">Dados da conta</p>
