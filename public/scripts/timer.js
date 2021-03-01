@@ -1,0 +1,1 @@
+ window.Timer = new timerControll();
