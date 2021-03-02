@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var logado= true;
+
+var authenticate = require('../model/authenticated');
+var logado= authenticate.authenticated;
 
 var productsModel = require("../model/skins");
 
@@ -11,12 +13,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post("/", function (req, res) {
-  const newProduct = req.body;
 
-  productsModel.insertProduct(newProduct);
-  res.redirect("/skins");
-});
 
 
 

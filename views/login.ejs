@@ -20,16 +20,16 @@
  <div class="container">
 
    
-    <form class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 g-4 needs-validation text-info text-center display-3 " novalidate>
+    <form method="POST" action="" class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 g-4 needs-validation text-info text-center display-3 " novalidate>
   
 
         <div class="col">
-            <label for="validationCustomEmail" class="form-label">Usuario ou Email</label>
+            <label for="validationCustomEmail" class="form-label">Email</label>
             <div class="input-group has-validation">
               
-              <input type="text" class="form-control" id="validationCustomLogin" aria-describedby="inputGroupPrepend" required>
+              <input type="text" class="form-control" id="validationCustomEmail" name="email" aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
-                Nome de Usuario ou Email invalidos
+                Email invalido
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
             <label for="validationCustomSenha" class="form-label">Senha</label>
             <div class="input-group has-validation">
               
-              <input type="password" class="form-control" id="validationCustomLoginSenha" aria-describedby="inputGroupPrepend" required>
+              <input type="password" class="form-control" name="password" id="validationCustomSenha" aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
                 Senha invalida
               </div>

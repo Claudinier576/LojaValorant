@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var skinsRouter = require('./routes/skins');
 var contactRouter = require('./routes/contact');
 var RegisterSkinRouter = require('./routes/RegisterSkin');
+var EDITskinRouter = require('./routes/EDITskin');
 var userControlRouter = require('./routes/userControl');
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
@@ -35,6 +36,7 @@ app.use('/ADDskin', RegisterSkinRouter);
 app.use('/userControl', userControlRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/EDITskin', EDITskinRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
