@@ -11,6 +11,7 @@ var skinsRouter = require('./routes/skins');
 var contactRouter = require('./routes/contact');
 var RegisterSkinRouter = require('./routes/RegisterSkin');
 var EDITskinRouter = require('./routes/EDITskin');
+var karRouter = require('./routes/kart');
 var userControlRouter = require('./routes/userControl');
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
@@ -37,14 +38,14 @@ app.use('/userControl', userControlRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/EDITskin', EDITskinRouter);
-
+app.use('/kart', karRouter);
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

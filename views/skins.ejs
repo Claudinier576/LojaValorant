@@ -44,8 +44,13 @@
                           <a href=""><img src="../images/<%= product.img %>" alt="" class="w-100"> </a>
                           <p class="card-text"><%= product.description %>, <strong>Conjunto:</strong>
                             <span style="color:rgb(255, 0, 0)"> <%= product.set %> </span> </p>
-                          <a href=""> <img src="../images/icons8-add-to-basket-32.png"
-                              class="position-absolute top-75 end-0 translate-middle" alt=""></a>
+                            <form action="/Skins/<%=product.id%>?" method="POST"  class="bg-dark  p-2">
+                              <button class="btn " type="submit">
+                                <img src="../images/icons8-add-to-basket-32.png"
+                              class="position-absolute top-75 end-0 translate-middle" alt="">
+                              </button>
+                            </form>
+                      
                         </div>
                         <div class="card-footer">
                           <p class="text-info"> <span class="timerDisplay"></span> </p>
