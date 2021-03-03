@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
-var authenticate = require('../model/authenticated');
-var logado= authenticate.authenticated;
+const middleware = require('../middlewares/skins');
+
+
 var path = require('path');
 
 var numberRandom = Math.random() *100;
@@ -29,11 +30,11 @@ var productsModel = require("../model/skins");
 /* GET skins page. */
 router.get('/', function(req, res, next) {
   const productsData = productsModel.getProducts();
-  res.render('RegisterSkin', { logado, productsData: productsData });
+  res.render('RegisterSkin', {  productsData: productsData });
 });
 
 
-router.post("/",upload.single('img'),function (req, res) {
+router.post("/",upload.single('img'),middleware.verifyempty,function (req, res) {
   const newProduct = req.body;
   var image = imageFile;
 

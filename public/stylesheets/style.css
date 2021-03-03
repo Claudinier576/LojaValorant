@@ -3,6 +3,18 @@
  border-radius: 30px;
 }
 
+.Productvalue{
+  position: absolute;
+  left: 70%;
+  color : #07da63;
+  border-bottom : 1px solid #07da63;
+}
+.clear{
+  clear: both;
+}
+.footerC{
+  width: 100%;
+}
 .dados a{
   width: 100%;
   color: white;

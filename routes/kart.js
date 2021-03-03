@@ -2,8 +2,7 @@ var kartModel = require("../model/kart");
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
-var authenticate = require('../model/authenticated');
-var logado = authenticate.authenticated;
+
 var path = require('path');
 
 var numberRandom = Math.random() * 100;
@@ -29,7 +28,7 @@ var upload = multer({ storage: storage })
 /* GET skins page. */
 router.get('/', function (req, res, next) {
   const productsData = kartModel.getProducts();
-  res.render('kart', { logado, productsData: productsData });
+  res.render('kart', { productsData: productsData });
 });
 
 
