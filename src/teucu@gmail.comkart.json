@@ -1,0 +1,42 @@
+[
+    {
+        "name": "soberania Marshal",
+        "id": 67.65792144655302,
+        "description": "Arma Amada Por todos",
+        "value": "15",
+        "set": "Soberania",
+        "img": "soberania_Marshal.png"
+    },
+    {
+        "name": "soberania Guardian",
+        "id": 72.61119628417806,
+        "description": "Arma Amada Por todos",
+        "value": "15",
+        "set": "Soberania",
+        "img": "soberania_Guardian.png"
+    },
+    {
+        "name": "Sublime Guardian",
+        "id": 69.10143568562728,
+        "description": "Arma Amada Por todos",
+        "value": 15,
+        "set": "Sublime",
+        "img": "Sublime_Guardian.png"
+    },
+    {
+        "name": "Zero two",
+        "value": "100",
+        "set": "Anime girl ",
+        "description": "Anime : Darling in the Franxx",
+        "id": 149.13562782731532,
+        "img": "zerotwok.png"
+    },
+    {
+        "name": "Pacote Sublime 2.0",
+        "value": "30000",
+        "set": "Sublime",
+        "description": "pacote sublime 2.0",
+        "id": 141.93167237701894,
+        "img": "32.54058513461544-EvZilJFWgAUtxnn.jpg"
+    }
+]

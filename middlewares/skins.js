@@ -1,6 +1,6 @@
 function verifyempty(req, res, next) {
     
-    console.log('passando o middleware')
+
     var requisition = req.body;
 
     if(requisition.name.trim() == ''){
@@ -27,6 +27,13 @@ function verifyempty(req, res, next) {
         res.status(500).send("Erro: o campo conjunto é obrigatório")
     }
     
+    if(requisition.description.length > 42){
+
+        requisition.description = requisition.description.substr(0, 39);
+
+        requisition.description =   requisition.description+ '...'
+    }
+
     next();
 
 }

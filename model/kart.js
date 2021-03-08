@@ -1,40 +1,59 @@
 const fs = require('fs');
-let products = require('../src/kart.json');
 let data = require('../src/guns.json');
 let date = new Date();
 let dateString = '';
 dateString += date.getDay() + '-' + date.getHours();
-console.log(dateString)
+
 let pathfile = 'src/kart' + dateString + '.txt';
 
 
 
-function getProducts() {
-    return products;
+function getkart(Pfile) {
+    try {
+        let kart = require('../src/' + Pfile + 'kart.json');
+        return kart;
+    }
+    catch (err) {
+        fs.writeFileSync('src/' + Pfile + 'kart.json', '[]');
+        let kart = require('../src/' + Pfile + 'kart.json');
+        return kart;
+    }
+
+
 }
 
 
-function insertProduct(productinfo) {
+function insertProduct(productinfo, Pfile) {
+    let kart = getkart(Pfile);
+
+    var p = data.filter(function (product) {
+        return product.id == productinfo;
+    })
+
+
    
-    var p = data.filter(function(product) {
-       return product.id == productinfo;
+
+    p.forEach(function (product) {
+        product.id = product.id + Math.random() * 100;
+
+        kart.push(product)
+
     })
 
-    console.log(p);
+ 
 
-    p.forEach(function(pr){
-        products.push(pr);
-    })
+    p = [];
 
-    
-    saveFile('save');
+   
+
+    saveFile('save', p.length, Pfile);
 }
 
 
-function saveFile(type, id) {
+function saveFile(type, id, Pfile) {
 
     let data = new Date();
-    let conteudos = getProducts();
+    let conteudos = getkart(Pfile);
     conteudo = conteudos[conteudos.length - 1];
 
 
@@ -52,85 +71,59 @@ function saveFile(type, id) {
 
     }
 
-    saveJson();
+    saveJson(Pfile);
 
 }
 
+function saveJson(Pfile, newkartC) {
+
+    if (newkartC != undefined) {
+
+        var newkart = JSON.stringify(newkartC);
+
+        fs.writeFileSync('src/' + Pfile + 'kart.json', newkart);
 
 
 
-function saveJson() {
+    } else {
 
+        let Nkart = getkart(Pfile);
 
-    var newProducts = JSON.stringify(products);
+        var newkart = JSON.stringify(Nkart);
 
-    fs.writeFileSync('src/kart.json', newProducts);
+        fs.writeFileSync('src/' + Pfile + 'kart.json', newkart);
+
+    }
+
 
 
 
 }
 
-function deleteFile(id) {
+function deleteFile(id, Pfile) {
+
+    let kart = getkart(Pfile);
+
+ 
 
 
+    kart = kart.filter(function (product) {
 
-    console.log('this is id: ' + id)
 
-    products = products.filter(function (product) {
         return product.id != id;
     })
 
-    console.log(products)
-
-    saveFile('delete', id);
+    saveJson(Pfile, kart);
 
 
 }
-
-function editFile(id, image) {
-
-
-
-    console.log('this is id: ' + id.id)
-
-    var product = products.filter(function (product) {
-        return product.id == id.id;
-    })
-
-    product.forEach(function (product) {
-
-        product.value = id.value;
-        product.set = id.set;
-        product.name = id.name;
-        product.description = id.description;
-        product.img = image;
-
-    });
-
-
-
-
-
-
-    console.log(product)
-
-
-
-
-    saveFile('edit', id.id);
-
-
-}
-
-
 
 
 
 
 
 module.exports = {
-    editFile: editFile,
     deleteFile: deleteFile,
-    getProducts: getProducts,
+    getkart: getkart,
     insertProduct: insertProduct
 };

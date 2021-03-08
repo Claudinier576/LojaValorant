@@ -25,10 +25,15 @@
  <div class="container">
 
    
-    <form class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-4 needs-validation text-info" novalidate>
+    <form
+    action="" 
+    method="POST"
+    class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-4 needs-validation text-info" 
+    novalidate
+    >
         <div class="col">
           <label for="validationCustom01" class="form-label">Primeiro Nome</label>
-          <input type="text" class="form-control" id="validationCustom01" value="" required>
+          <input type="text" class="form-control" name="firstname" id="validationCustom01" value="" required>
           <div class="valid-feedback">
             Boa!
           </div>
@@ -38,7 +43,7 @@
         </div>
         <div class="col">
           <label for="validationCustom02" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control" id="validationCustom02" value="" required>
+          <input type="text" class="form-control" name="lastname" id="validationCustom02" value="" required>
           <div class="valid-feedback">
             Boa!
           </div>
@@ -50,7 +55,7 @@
           <label for="validationCustomUsername" class="form-label">Nome de Usuario</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <input type="text" class="form-control" name="username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
             <div class="invalid-feedback">
                 Por favor Escolha um UserName.
             </div>
@@ -60,7 +65,7 @@
             <label for="validationCustomEmail" class="form-label">Email</label>
             <div class="input-group has-validation">
               
-              <input type="text" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend" required>
+              <input type="text" name="email"  class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
                   Por favor Digite um email valido.
               </div>
@@ -70,7 +75,7 @@
             <label for="validationCustomSenha" class="form-label">Senha</label>
             <div class="input-group has-validation">
               
-              <input type="password" class="form-control" id="validationCustomSenha" aria-describedby="inputGroupPrepend" required>
+              <input type="password" class="form-control" name="password" id="validationCustomSenha" aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
                   Por favor Digite uma Senha valida.
               </div>
@@ -78,14 +83,14 @@
           </div>
         <div class="col-md-6">
           <label for="validationCustom03" class="form-label">Cidade</label>
-          <input type="text" class="form-control" id="validationCustom03" required>
+          <input type="text" class="form-control" name="city" id="validationCustom03" required>
           <div class="invalid-feedback">
             Forneça uma cidade válida.
           </div>
         </div>
         <div class="col">
           <label for="validationCustom04" class="form-label">Estado</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select class="form-select" name="state" id="validationCustom04" required>
             <option selected disabled value="">Escolher...</option>
             <option>AC</option>
             <option>AL</option>
@@ -123,7 +128,7 @@
           </div>
         </div>
         <div class="col">
-          <label for="validationCustom05" class="form-label">CEP</label>
+          <label for="validationCustom05" name="cep" class="form-label">CEP</label>
           <input type="text" class="form-control" id="validationCustom05" required>
           <div class="invalid-feedback">
             Forneça um CEP válido.
@@ -131,7 +136,7 @@
         </div>
         <div class="col">
             <label for="validationCustom06" class="form-label">Numero</label>
-            <input type="number" class="form-control" id="validationCustom06" required>
+            <input type="number" class="form-control" name="numberUser" id="validationCustom06" required>
             <div class="invalid-feedback">
               Forneça um CEP válido.
             </div>

@@ -1,11 +1,12 @@
 var express = require('express');
+const { route } = require('./RegisterSkin');
 var router = express.Router();
-var middlewarePublic = require('../middlewares/public');
 
-
-/* GET home page. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('index', {});
-});
 
+    res.render('loginNotify');
+
+});
 module.exports = router;
+   

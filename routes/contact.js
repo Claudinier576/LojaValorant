@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-
+var middlewarePublic = require('../middlewares/public');
 
 
 
 /* GET contact page. */
-router.get('/', function(req, res, next) {
+router.get('/',middlewarePublic.isLoad, function(req, res, next) {
   res.render('contact', {  });
 });
 

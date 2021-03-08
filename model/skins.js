@@ -2,7 +2,7 @@ let products = require('../src/guns.json');
 let date = new Date();
 let dateString = '';
 dateString += date.getDay() +'-'+date.getHours();
-console.log(dateString)
+
 
 
 
@@ -65,13 +65,12 @@ function deleteFile(id){
 
   
 
-  console.log('this is id: '+id)
+
 
   products = products.filter(function(product){
     return product.id != id;
   })
 
-  console.log(products)
 
   saveFile('delete',id);
 
@@ -81,8 +80,6 @@ function deleteFile(id){
 function editFile(id,image){
 
   
-
-  console.log('this is id: '+id.id)
 
   var product = products.filter(function(product){
     return product.id == id.id;
@@ -94,19 +91,14 @@ function editFile(id,image){
     product.set = id.set;
     product.name = id.name;
     product.description = id.description;
-    product.img = image;
+    if(image != ''){
+      product.img = image;
+    }
+  
 
   });
 
 
-
-
- 
-
-  console.log(product)
-
-
-  
 
   saveFile('edit',id.id);
 

@@ -1,7 +1,7 @@
 var express = require('express');
 const { route } = require('./RegisterSkin');
 var router = express.Router();
-
+const middlewareLogin = require('../middlewares/login')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,12 +9,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/', function(req, res, next) {
+router.post('/', middlewareLogin.verifyLogins ,function(req, res, next) {
   
+  
+  if(req.body.logado !== undefined){
+    res.cookie('loginEmail', req.body.email,{maxAge:900000});
+    res.cookie('loginPassword', req.body.password,{maxAge:900000});
+  }
 
-  console.log('req pagina login = '+ req.body)
-
-  res.redirect('/skins');
+  res.redirect('/');
 
 
 })

@@ -23,27 +23,25 @@
 
               <br>
               <div class="container text-white">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2  row-cols-lg-3  row-cols-xl-4 g-4">
 
                   <% productsData.forEach(function(product) { %>
 
                     <div class="col">
 
-                      <div class="card bg-dark">
+                      <div class="card bg-dark Wover">
                         <div class="card-header text-center bg-dark">
                           <h1><%= product.name%></h1>
                         </div>
                         <div class="card-body ">
                           <h5 class="card-title text-success">R$ <%= product.value %></h5>
-                          <a href=""><img src="../images/<%= product.img %>" alt="" class="w-100"> </a>
+                          <a href=""><img src="../images/<%= product.img %>" alt="" class="w-100 hmax-100"> </a>
                           <p class="card-text"><%= product.description %>, <strong>Conjunto:</strong>
                             <span style="color:rgb(255, 0, 0)"> <%= product.set %> </span> </p>
                               <form action="/ADDskin/<%=product.id%>?_method=DELETE"" method="POST"> <button class="btn"type="submit"><img src="../images/icons8-delete-32.png"
-                                class="position-absolute top-75 end-0 translate-middle" alt=""></button> </form>
+                                class="position-absolute top-85 end-0 translate-middle" alt=""></button> </form>
                         </div>
-                        <div class="card-footer">
-                          <p class="text-info ">  <span class="timerDisplay"></span>  </p>
-                        </div>
+                   
                       </div>
                     </div>
   

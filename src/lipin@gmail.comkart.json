@@ -1,0 +1,34 @@
+[
+    {
+        "name": "soberania Guardian",
+        "id": 76.37178043366335,
+        "description": "Arma Amada Por todos",
+        "value": "15",
+        "set": "Soberania",
+        "img": "soberania_Guardian.png"
+    },
+    {
+        "name": "soberania Ghost",
+        "id": 41.32680952958737,
+        "description": "Arma Amada Por todos",
+        "value": "15",
+        "set": "Soberania",
+        "img": "soberania_Ghost.png"
+    },
+    {
+        "name": "Saqueador_Faca",
+        "id": 84.88985134777373,
+        "description": "Arma Amada Por todos",
+        "value": 100,
+        "set": "Saqueador",
+        "img": "Saqueador_Faca.png"
+    },
+    {
+        "name": "Zero two",
+        "value": "100",
+        "set": "Anime girl ",
+        "description": "Anime : Darling in the Franxx",
+        "id": 136.9016389212377,
+        "img": "zerotwok.png"
+    }
+]

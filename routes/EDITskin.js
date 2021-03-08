@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
-
+var middlewarePublic = require('../middlewares/public');
 var path = require('path');
 var productsModel = require("../model/skins");
 var numberRandom = Math.random() * 100;
@@ -26,7 +26,7 @@ var upload = multer({ storage: storage })
 
 
 
-router.get('/', function (req, res, next) {
+router.get('/', middlewarePublic.isLoad,function (req, res, next) {
     const productsData = productsModel.getProducts();
     res.render('EDITskin', {  productsData: productsData, form:form});
 });
@@ -40,7 +40,6 @@ router.put('/',upload.single('img'), function (req, res, next) {
     const newProduct = req.body;
     var image = imageFile;
 
-    console.log(req)
 
     productsModel.editFile(newProduct,image);
 

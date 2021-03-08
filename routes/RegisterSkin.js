@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
 const middleware = require('../middlewares/skins');
+var middlewarePublic = require('../middlewares/public');
 
 
 var path = require('path');
@@ -28,7 +29,7 @@ var upload = multer({ storage: storage })
 var productsModel = require("../model/skins");
 
 /* GET skins page. */
-router.get('/', function(req, res, next) {
+router.get('/', middlewarePublic.isLoad,function(req, res, next) {
   const productsData = productsModel.getProducts();
   res.render('RegisterSkin', {  productsData: productsData });
 });
@@ -39,8 +40,6 @@ router.post("/",upload.single('img'),middleware.verifyempty,function (req, res) 
   var image = imageFile;
 
   productsModel.insertProduct(newProduct,image);
-  
-console.log(req)
 
 
   res.redirect("/ADDskin");
